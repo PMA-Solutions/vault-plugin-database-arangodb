@@ -45,13 +45,13 @@ var _ dbplugin.Database = &ArangoDB{}
 
 // New returns a new ArangoDB instance
 func New() (interface{}, error) {
-	db := new()
+	db := Connect()
 	dbType := dbplugin.NewDatabaseErrorSanitizerMiddleware(db, db.secretValues)
 
 	return dbType, nil
 }
 
-func new() *ArangoDB {
+func Connect() *ArangoDB {
 	connProducer := &arangoDBConnectionProducer{}
 	connProducer.Type = arangoDBTypeName
 
