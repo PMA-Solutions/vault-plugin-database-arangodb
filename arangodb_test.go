@@ -101,7 +101,7 @@ func TestArangoDB_Initialize(t *testing.T) {
 	cleanup, config := prepareArangoDBTestContainer(t)
 	defer cleanup()
 
-	db := new()
+	db := Connect()
 	defer dbtesting.AssertClose(t, db)
 
 	pluginConfig := map[string]interface{}{
@@ -133,7 +133,7 @@ func TestMongoDB_CreateUser(t *testing.T) {
 	cleanup, config := prepareArangoDBTestContainer(t)
 	defer cleanup()
 
-	db := new()
+	db := Connect()
 	defer dbtesting.AssertClose(t, db)
 
 	initReq := dbplugin.InitializeRequest{

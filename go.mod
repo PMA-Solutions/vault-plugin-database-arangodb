@@ -1,4 +1,4 @@
-module github.com/followmytv/vault-plugin-database-arangodb
+module github.com/PMA-Solutions/vault-plugin-database-arangodb
 
 go 1.16
 

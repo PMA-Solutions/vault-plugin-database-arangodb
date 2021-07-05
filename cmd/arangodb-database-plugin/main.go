@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	arangodb "github.com/followmytv/vault-plugin-database-arangodb"
+	arangodb "github.com/PMA-Solutions/vault-plugin-database-arangodb"
 	dbplugin "github.com/hashicorp/vault/sdk/database/dbplugin/v5"
 )
 
