@@ -19,7 +19,7 @@ jobs:
         go-version: 1.16
 
     - name: Build
-      run: go build -o build/arangodb-database-plugin cmd/arangodb-database-plugin
+      run: go build -o ./build/arangodb-database-plugin ./cmd/arangodb-database-plugin
       
     - name: Release
       uses: softprops/action-gh-release@v1
